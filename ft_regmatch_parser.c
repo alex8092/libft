@@ -43,10 +43,8 @@ static void	ft_reg_parse_brack(t_reg *reg)
 static void	ft_reg_parse_base(t_reg *reg)
 {
 	t_op_base	*base;
-	size_t		i;
 
 	base = (t_op_base *)ft_reg_create_op(REGOP_BASE, reg);
-	i = reg->pos_reg;
 	base->find = reg->s_reg[reg->pos_reg];
 	ft_printf("parse base : %c\n", base->find);
 	++reg->pos_reg;
